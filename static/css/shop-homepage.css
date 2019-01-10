@@ -6,10 +6,15 @@
 
 body {
   padding-top: 54px;
+  /*background-image: url("./static/img/Gradient_Background.png")*/
+  background-color: #5b5b5b;
 }
 
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
   }
+}
+h1 {
+    color: #ffffff;
 }
