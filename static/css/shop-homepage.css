@@ -5,13 +5,17 @@
  */
 
 /* To-do list
-    -change background color to a nice gradient
     -maybe add some stroke to text to have it stand out
 */
 
+.custom-bg{
+    background-color: #4b166b;
+}
+
+
+
 body {
   padding-top: 54px;
-  /*background-image: url("./static/img/Gradient_Background.png")*/
   background-color: #000000;
 }
 

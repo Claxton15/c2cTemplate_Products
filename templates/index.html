@@ -6,13 +6,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="Jacob Claxton" content="">
 
     <title>Vind Easel</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="../static/vendor/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- images -->
+    <link href="../static/img">
 
     <!-- Custom styles for this template -->
     <link href="../static/css/shop-homepage.css" rel="stylesheet">
@@ -22,6 +25,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
+     <script>
+    var name = '{{ name }}';
+    </script>
   </head>
 
   <body>
@@ -43,7 +49,7 @@
         </button>
       </div>
       <div class="modal-body">
-        This feature isn't implemented yet but it's planned to be added at a later date!
+        This feature isn't implemented yet.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Alrighty!</button>
@@ -88,15 +94,22 @@
 
       <div class="row">
 
+    <button onclick="alert('name:  {{ json.pageInfo.totalResults }}')">the button </button>
+    <button onclick="alert('www.youtube.com/watch?v={{ videoId }}')">The other button</button>
+    <button onclick="alert(' {{ title  }} ')"> Title</button>
+
         <!-- /.col-lg-3 -->
 
+    <!-- Header image -->
         <div class="col-lg-12">
+            <img src="../static/img/Banner (updated).png" alt="it seems as though there's no picture here...hmm" class="img-thumbnail" style="margin-bottom:25px; margin-top:25px">
+        </div>
 
+
+<!---
           <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
@@ -119,22 +132,20 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-
+--->
           <div class="row">
 
             <!--<div class="col-lg-2"></div>-->
 
+
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
                 <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item One</a>
+                    <a href="#">Behind the Scenes</a>
                   </h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  <p class="card-text">Watch behind the scenes videos of some of your favorite games!</p>
                 </div>
               </div>
             </div>
@@ -144,12 +155,21 @@
                 <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Two</a>
+                    <a href="{{ url_for('easteregg') }}" target="_new">Easter Eggs</a>
                   </h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                  <p class="card-text">Discover some of the hidden secrets found in the video games you play!</p>
                 </div>
-                <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="../static/img/Tutorial Icon.png" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Tutorials</a>
+                  </h4>
+                  <p class="card-text">Learn some new tips & tricks to better your skills!</p>
                 </div>
               </div>
             </div>
@@ -159,12 +179,9 @@
                 <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Three</a>
+                    <a href="#">Let's Plays</a>
                   </h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  <p class="card-text">Are you too poor to buy your own game? Just watch some other people play it!</p>
                 </div>
               </div>
             </div>
@@ -174,12 +191,9 @@
                 <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Four</a>
+                    <a href="#">Skits</a>
                   </h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  <p class="card-text">Watch some well directed machinimas by some of your favorite tubers!</p>
                 </div>
               </div>
             </div>
@@ -189,27 +203,9 @@
                 <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Five</a>
+                    <a href="#">Pro Gaming</a>
                   </h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">Item Six</a>
-                  </h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  <p class="card-text">Watch your favorite pro e-sport athletes!</p>
                 </div>
               </div>
             </div>
@@ -250,7 +246,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Vind Easel 2018</p>
       </div>
       <!-- /.container -->
     </footer>
