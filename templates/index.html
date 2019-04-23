@@ -94,9 +94,6 @@
 
       <div class="row">
 
-    <button onclick="alert('name:  {{ json.pageInfo.totalResults }}')">the button </button>
-    <button onclick="alert('www.youtube.com/watch?v={{ videoId }}')">The other button</button>
-    <button onclick="alert(' {{ title  }} ')"> Title</button>
 
         <!-- /.col-lg-3 -->
 
@@ -140,24 +137,24 @@
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="../static/img/upcoming.png" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Behind the Scenes</a>
+                    <a href="{{ url_for('BTS') }}">Upcoming Titles</a>
                   </h4>
-                  <p class="card-text">Watch behind the scenes videos of some of your favorite games!</p>
+                  <p class="card-text">Check out these awesome up and coming video games!</p>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="../static/img/Egg.png" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="{{ url_for('easteregg') }}" target="_new">Easter Eggs</a>
                   </h4>
-                  <p class="card-text">Discover some of the hidden secrets found in the video games you play!</p>
+                  <p class="card-text">Discover some hidden secrets found in the video games you play!</p>
                 </div>
               </div>
             </div>
@@ -167,45 +164,45 @@
                 <a href="#"><img class="card-img-top" src="../static/img/Tutorial Icon.png" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Tutorials</a>
+                    <a href="{{ url_for('tutorials') }}">Tutorials</a>
                   </h4>
-                  <p class="card-text">Learn some new tips & tricks to better your skills!</p>
+                  <p class="card-text">Learn some new tips & tricks to better your epic gamer skills!</p>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="../static/img/play_n.png" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Let's Plays</a>
+                    <a href="{{ url_for('letsPlay') }}">Let's Plays</a>
                   </h4>
-                  <p class="card-text">Are you too poor to buy your own game? Just watch some other people play it!</p>
+                  <p class="card-text">Are you too poor to buy that new game everyone's talking about? Just watch someone else play it!</p>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="../static/img/clapboard.png" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Skits</a>
+                    <a href="{{ url_for('skits') }}">Skits</a>
                   </h4>
-                  <p class="card-text">Watch some well directed machinimas by some of your favorite tubers!</p>
+                  <p class="card-text">Watch some well directed machinimas by some of your favorite 'tubers!</p>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="../static/img/game.png" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Pro Gaming</a>
+                    <a href="{{ url_for('proGaming') }}">Pro Gaming</a>
                   </h4>
-                  <p class="card-text">Watch your favorite pro e-sport athletes!</p>
+                  <p class="card-text">Watch the most professional e-sport athletes!</p>
                 </div>
               </div>
             </div>
