@@ -42,7 +42,7 @@ def skits():
 @app.route('/proGaming', methods=['GET'])
 def proGaming():
     proSearch= random.choice(["csgo%20pro%20gaming","csgo%20eleague","csgo%20tournament"])
-    return redirect(proSearch)
+    return search(proSearch)
 
 def search(query):
     r=requests.get("https://www.googleapis.com/youtube/v3/search?part=snippet&maxresult=25&q=" + query + "&key=AIzaSyDYCJ1jsTCVm7h2jiDaind5B51uybE382U")
